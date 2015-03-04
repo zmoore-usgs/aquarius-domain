@@ -10,4 +10,5 @@ while [ `curl -s -o /dev/null -w "%{http_code}" "http://nwistssprint.cr.usgs.gov
 	let COUNTER=COUNTER+1
 done
 
+sed -i -r 's/type="q[^:]+:DateTimeOffset"/type="xs:dateTime"/g' $XSD_DIRECTORY/*.xsd
 sed -i 's/AuthenticateResponse/AuthenticateResponseObj/g' $XSD_DIRECTORY/*.xsd

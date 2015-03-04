@@ -80,8 +80,8 @@
   <xs:element name="Processor" nillable="true" type="tns:Processor" />
   <xs:complexType name="TimeRange">
     <xs:sequence>
-      <xs:element minOccurs="0" name="EndTime" xmlns:q3="http://schemas.datacontract.org/2004/07/System" type="q3:DateTimeOffset" />
-      <xs:element minOccurs="0" name="StartTime" xmlns:q4="http://schemas.datacontract.org/2004/07/System" type="q4:DateTimeOffset" />
+      <xs:element minOccurs="0" name="EndTime" xmlns:q3="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartTime" xmlns:q4="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="TimeRange" nillable="true" type="tns:TimeRange" />
@@ -97,16 +97,16 @@
       <xs:element minOccurs="0" name="ComputationIdentifier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ComputationPeriodIdentifier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="EndTime" xmlns:q5="http://schemas.datacontract.org/2004/07/System" type="q5:DateTimeOffset" />
+      <xs:element minOccurs="0" name="EndTime" xmlns:q5="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ExtendedAttributes" nillable="true" type="tns:ArrayOfExtendedAttribute" />
       <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LastModified" xmlns:q6="http://schemas.datacontract.org/2004/07/System" type="q6:DateTimeOffset" />
+      <xs:element minOccurs="0" name="LastModified" xmlns:q6="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="LocationIdentifier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="NumPoints" type="xs:long" />
       <xs:element minOccurs="0" name="Parameter" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Publish" type="xs:boolean" />
-      <xs:element minOccurs="0" name="StartTime" xmlns:q7="http://schemas.datacontract.org/2004/07/System" type="q7:DateTimeOffset" />
+      <xs:element minOccurs="0" name="StartTime" xmlns:q7="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="SubLocationIdentifier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TimeSeriesType" type="tns:AtomType" />
       <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
@@ -149,7 +149,7 @@
   <xs:element name="ArrayOfTimeSeriesIdentifier" nillable="true" type="tns:ArrayOfTimeSeriesIdentifier" />
   <xs:complexType name="TimeSeriesIdentifier">
     <xs:sequence>
-      <xs:element minOccurs="0" name="FirstPointChanged" nillable="true" xmlns:q8="http://schemas.datacontract.org/2004/07/System" type="q8:DateTimeOffset" />
+      <xs:element minOccurs="0" name="FirstPointChanged" nillable="true" xmlns:q8="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="HasAttributeChange" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -194,11 +194,11 @@
   <xs:element name="ArrayOfCorrection" nillable="true" type="tns:ArrayOfCorrection" />
   <xs:complexType name="Correction">
     <xs:sequence>
-      <xs:element minOccurs="0" name="AppliedTime" xmlns:q9="http://schemas.datacontract.org/2004/07/System" type="q9:DateTimeOffset" />
+      <xs:element minOccurs="0" name="AppliedTime" xmlns:q9="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="EndTime" xmlns:q10="http://schemas.datacontract.org/2004/07/System" type="q10:DateTimeOffset" />
+      <xs:element minOccurs="0" name="EndTime" xmlns:q10="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Parameters" nillable="true" xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" type="q11:ArrayOfKeyValueOfstringstring" />
-      <xs:element minOccurs="0" name="StartTime" xmlns:q12="http://schemas.datacontract.org/2004/07/System" type="q12:DateTimeOffset" />
+      <xs:element minOccurs="0" name="StartTime" xmlns:q12="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Type" type="tns:CorrectionType" />
       <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -253,7 +253,7 @@
   <xs:element name="ArrayOfEffectiveShift" nillable="true" type="tns:ArrayOfEffectiveShift" />
   <xs:complexType name="EffectiveShift">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Timestamp" xmlns:q13="http://schemas.datacontract.org/2004/07/System" type="q13:DateTimeOffset" />
+      <xs:element minOccurs="0" name="Timestamp" xmlns:q13="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Value" nillable="true" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
@@ -278,7 +278,7 @@
         <xs:sequence>
           <xs:element minOccurs="0" name="ApprovalLevel" type="xs:int" />
           <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="DateApplied" xmlns:q14="http://schemas.datacontract.org/2004/07/System" type="q14:DateTimeOffset" />
+          <xs:element minOccurs="0" name="DateApplied" xmlns:q14="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
           <xs:element minOccurs="0" name="LevelDescription" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
         </xs:sequence>
@@ -309,14 +309,14 @@
   <xs:complexType name="FieldVisitDescription">
     <xs:sequence>
       <xs:element minOccurs="0" name="CompletedWork" nillable="true" xmlns:q15="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit" type="q15:CompletedWork" />
-      <xs:element minOccurs="0" name="EndTime" nillable="true" xmlns:q16="http://schemas.datacontract.org/2004/07/System" type="q16:DateTimeOffset" />
+      <xs:element minOccurs="0" name="EndTime" nillable="true" xmlns:q16="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
-      <xs:element minOccurs="0" name="LastModified" xmlns:q17="http://schemas.datacontract.org/2004/07/System" type="q17:DateTimeOffset" />
+      <xs:element minOccurs="0" name="LastModified" xmlns:q17="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="LocationIdentifier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Party" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StartTime" nillable="true" xmlns:q18="http://schemas.datacontract.org/2004/07/System" type="q18:DateTimeOffset" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" xmlns:q18="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Weather" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -380,9 +380,9 @@
   <xs:complexType name="PeriodOfApplicability">
     <xs:sequence>
       <xs:element minOccurs="0" name="Approval" type="xs:int" />
-      <xs:element minOccurs="0" name="EndTime" xmlns:q19="http://schemas.datacontract.org/2004/07/System" type="q19:DateTimeOffset" />
+      <xs:element minOccurs="0" name="EndTime" xmlns:q19="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StartTime" xmlns:q20="http://schemas.datacontract.org/2004/07/System" type="q20:DateTimeOffset" />
+      <xs:element minOccurs="0" name="StartTime" xmlns:q20="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PeriodOfApplicability" nillable="true" type="tns:PeriodOfApplicability" />
@@ -430,11 +430,11 @@
   <xs:element name="ArrayOfLocationRemark" nillable="true" type="tns:ArrayOfLocationRemark" />
   <xs:complexType name="LocationRemark">
     <xs:sequence>
-      <xs:element minOccurs="0" name="CreateTime" nillable="true" xmlns:q21="http://schemas.datacontract.org/2004/07/System" type="q21:DateTimeOffset" />
+      <xs:element minOccurs="0" name="CreateTime" nillable="true" xmlns:q21="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FromTime" nillable="true" xmlns:q22="http://schemas.datacontract.org/2004/07/System" type="q22:DateTimeOffset" />
+      <xs:element minOccurs="0" name="FromTime" nillable="true" xmlns:q22="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ToTime" nillable="true" xmlns:q23="http://schemas.datacontract.org/2004/07/System" type="q23:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ToTime" nillable="true" xmlns:q23="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -448,7 +448,7 @@
   <xs:complexType name="LocationDescription">
     <xs:sequence>
       <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LastModified" xmlns:q24="http://schemas.datacontract.org/2004/07/System" type="q24:DateTimeOffset" />
+      <xs:element minOccurs="0" name="LastModified" xmlns:q24="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PrimaryFolder" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SecondaryFolders" nillable="true" xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" type="q25:ArrayOfstring" />
@@ -488,7 +488,7 @@
       <xs:element minOccurs="0" name="Approval" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="Interpolation" type="xs:int" />
-      <xs:element minOccurs="0" name="Timestamp" xmlns:q26="http://schemas.datacontract.org/2004/07/System" type="q26:DateTimeOffset" />
+      <xs:element minOccurs="0" name="Timestamp" xmlns:q26="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Value" nillable="true" type="tns:DoubleWithDisplay" />
     </xs:sequence>
   </xs:complexType>
@@ -510,7 +510,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:TimeRange">
         <xs:sequence>
-          <xs:element minOccurs="0" name="DateApplied" xmlns:q27="http://schemas.datacontract.org/2004/07/System" type="q27:DateTimeOffset" />
+          <xs:element minOccurs="0" name="DateApplied" xmlns:q27="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
           <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
         </xs:sequence>
@@ -530,7 +530,7 @@
       <xs:element minOccurs="0" name="InputParameter" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="InputUnit" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LastModified" xmlns:q28="http://schemas.datacontract.org/2004/07/System" type="q28:DateTimeOffset" />
+      <xs:element minOccurs="0" name="LastModified" xmlns:q28="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="LocationIdentifier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OutputParameter" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OutputUnit" nillable="true" type="xs:string" />

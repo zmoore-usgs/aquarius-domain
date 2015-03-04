@@ -6,7 +6,7 @@
   <xs:complexType name="ApprovalListServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="Approvals" nillable="true" xmlns:q1="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q1:ArrayOfApprovalMetadata" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q2="http://schemas.datacontract.org/2004/07/System" type="q2:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q2="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -24,7 +24,7 @@
   <xs:complexType name="QualifierListServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="Qualifiers" nillable="true" xmlns:q4="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q4:ArrayOfQualifierMetadata" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q5="http://schemas.datacontract.org/2004/07/System" type="q5:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q5="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -33,7 +33,7 @@
   <xs:complexType name="UpchainProcessorListByTimeSeriesServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="Processors" nillable="true" xmlns:q6="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q6:ArrayOfProcessor" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q7="http://schemas.datacontract.org/2004/07/System" type="q7:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q7="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -42,7 +42,7 @@
   <xs:complexType name="DownchainProcessorListByTimeSeriesServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="Processors" nillable="true" xmlns:q8="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q8:ArrayOfProcessor" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q9="http://schemas.datacontract.org/2004/07/System" type="q9:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q9="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -50,7 +50,7 @@
   <xs:element name="DownchainProcessorListByTimeSeriesServiceResponse" nillable="true" type="tns:DownchainProcessorListByTimeSeriesServiceResponse" />
   <xs:complexType name="TimeSeriesDescriptionListByIdentifierServiceResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q10="http://schemas.datacontract.org/2004/07/System" type="q10:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q10="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TimeSeriesDescriptions" nillable="true" xmlns:q11="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q11:ArrayOfTimeSeriesDescription" />
@@ -60,7 +60,7 @@
   <xs:complexType name="TimeSeriesIdentifierListServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="NextToken" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q12="http://schemas.datacontract.org/2004/07/System" type="q12:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q12="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TimeSeriesIdentifiers" nillable="true" xmlns:q13="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q13:ArrayOfTimeSeriesIdentifier" />
@@ -71,7 +71,7 @@
   <xs:complexType name="ParameterListServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="Parameters" nillable="true" xmlns:q14="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q14:ArrayOfParameterMetadata" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q15="http://schemas.datacontract.org/2004/07/System" type="q15:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q15="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -80,7 +80,7 @@
   <xs:complexType name="GradeListServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="Grades" nillable="true" xmlns:q16="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q16:ArrayOfGradeMetadata" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q17="http://schemas.datacontract.org/2004/07/System" type="q17:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q17="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -89,7 +89,7 @@
   <xs:complexType name="CorrectionListServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="Corrections" nillable="true" xmlns:q18="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q18:ArrayOfCorrection" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q19="http://schemas.datacontract.org/2004/07/System" type="q19:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q19="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -98,7 +98,7 @@
   <xs:complexType name="SensorsAndGaugesServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="MonitoringMethods" nillable="true" xmlns:q20="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q20:ArrayOfLocationMonitoringMethod" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q21="http://schemas.datacontract.org/2004/07/System" type="q21:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q21="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -111,7 +111,7 @@
       <xs:element minOccurs="0" name="DischargeActivities" nillable="true" xmlns:q24="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit" type="q24:ArrayOfDischargeActivity" />
       <xs:element minOccurs="0" name="GageHeightAtZeroFlowActivity" nillable="true" xmlns:q25="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit" type="q25:GageHeightAtZeroFlowActivity" />
       <xs:element minOccurs="0" name="InspectionActivity" nillable="true" xmlns:q26="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit" type="q26:InspectionActivity" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q27="http://schemas.datacontract.org/2004/07/System" type="q27:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q27="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -120,7 +120,7 @@
   <xs:complexType name="RatingModelEffectiveShiftsServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="EffectiveShifts" nillable="true" xmlns:q28="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q28:ArrayOfEffectiveShift" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q29="http://schemas.datacontract.org/2004/07/System" type="q29:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q29="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -129,7 +129,7 @@
   <xs:complexType name="TimeSeriesApprovalsTransactionListServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="ApprovalsTransactions" nillable="true" xmlns:q30="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q30:ArrayOfApprovalsTransaction" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q31="http://schemas.datacontract.org/2004/07/System" type="q31:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q31="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -139,7 +139,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Corrections" nillable="true" xmlns:q32="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q32:ArrayOfCorrection" />
       <xs:element minOccurs="0" name="ExpandedStageTable" nillable="true" xmlns:q33="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q33:ArrayOfStagePoint" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q34="http://schemas.datacontract.org/2004/07/System" type="q34:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q34="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -149,7 +149,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="FieldVisitDescriptions" nillable="true" xmlns:q35="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q35:ArrayOfFieldVisitDescription" />
       <xs:element minOccurs="0" name="NextToken" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q36="http://schemas.datacontract.org/2004/07/System" type="q36:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q36="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -158,7 +158,7 @@
   <xs:complexType name="EffectiveRatingCurveServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="ExpandedRatingCurve" nillable="true" xmlns:q37="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q37:ExpandedRatingCurve" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q38="http://schemas.datacontract.org/2004/07/System" type="q38:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q38="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -177,7 +177,7 @@
       <xs:element minOccurs="0" name="LocationRemarks" nillable="true" xmlns:q40="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q40:ArrayOfLocationRemark" />
       <xs:element minOccurs="0" name="LocationType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Longitude" type="xs:double" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q41="http://schemas.datacontract.org/2004/07/System" type="q41:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q41="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Srid" type="xs:double" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
@@ -189,7 +189,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="LocationDescriptions" nillable="true" xmlns:q42="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q42:ArrayOfLocationDescription" />
       <xs:element minOccurs="0" name="NextToken" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q43="http://schemas.datacontract.org/2004/07/System" type="q43:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q43="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -206,7 +206,7 @@
       <xs:element minOccurs="0" name="Parameter" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Points" nillable="true" xmlns:q46="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q46:ArrayOfTimeSeriesPoint" />
       <xs:element minOccurs="0" name="Qualifiers" nillable="true" xmlns:q47="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q47:ArrayOfQualifier" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q48="http://schemas.datacontract.org/2004/07/System" type="q48:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q48="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TimeRange" nillable="true" xmlns:q49="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q49:TimeRange" />
@@ -218,7 +218,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="NextToken" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="RatingModelDescriptions" nillable="true" xmlns:q50="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q50:ArrayOfRatingModelDescription" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q51="http://schemas.datacontract.org/2004/07/System" type="q51:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q51="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -227,7 +227,7 @@
   <xs:complexType name="RatingModelInputValuesServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="InputValues" nillable="true" xmlns:q52="http://schemas.datacontract.org/2004/07/System" type="q52:ArrayOfNullableOfdouble" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q53="http://schemas.datacontract.org/2004/07/System" type="q53:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q53="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -236,7 +236,7 @@
   <xs:complexType name="RatingModelOutputValuesServiceResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="OutputValues" nillable="true" xmlns:q54="http://schemas.datacontract.org/2004/07/System" type="q54:ArrayOfNullableOfdouble" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q55="http://schemas.datacontract.org/2004/07/System" type="q55:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q55="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -246,7 +246,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Approvals" nillable="true" xmlns:q56="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q56:ArrayOfApproval" />
       <xs:element minOccurs="0" name="RatingCurves" nillable="true" xmlns:q57="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q57:ArrayOfRatingCurve" />
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q58="http://schemas.datacontract.org/2004/07/System" type="q58:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q58="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -254,7 +254,7 @@
   <xs:element name="RatingCurveListServiceResponse" nillable="true" type="tns:RatingCurveListServiceResponse" />
   <xs:complexType name="TimeSeriesDescriptionListServiceResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q59="http://schemas.datacontract.org/2004/07/System" type="q59:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q59="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TimeSeriesDescriptions" nillable="true" xmlns:q60="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q60:ArrayOfTimeSeriesDescription" />
@@ -263,7 +263,7 @@
   <xs:element name="TimeSeriesDescriptionListServiceResponse" nillable="true" type="tns:TimeSeriesDescriptionListServiceResponse" />
   <xs:complexType name="UnitListServiceResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ResponseTime" xmlns:q61="http://schemas.datacontract.org/2004/07/System" type="q61:DateTimeOffset" />
+      <xs:element minOccurs="0" name="ResponseTime" xmlns:q61="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ResponseVersion" type="xs:int" />
       <xs:element minOccurs="0" name="Summary" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Units" nillable="true" xmlns:q62="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" type="q62:ArrayOfUnitMetadata" />
