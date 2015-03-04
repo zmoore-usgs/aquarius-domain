@@ -140,7 +140,8 @@
 				<configuration>
 					<schemaDirectory>${project.build.directory}/generated-sources/aqSchema</schemaDirectory>
 					<nv>true</nv>
-					<packageName>gov.usgs.cida.aquarius</packageName> <!-- The name of your generated source package -->
+					<packageName>gov.usgs.cida.aquarius</packageName>
+					<bindingFiles>bindings.xjb</bindingFiles>
 				</configuration>
 			</plugin>
 		</plugins>
