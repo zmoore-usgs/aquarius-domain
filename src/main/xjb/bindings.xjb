@@ -5,5 +5,9 @@
 	<jaxb:globalBindings 
 		collectionType="java.util.ArrayList"
 		generateElementProperty="false">
+		<!-- use JODA-Time DateTime for xs:date -->
+        <jaxb:javaType name="org.joda.time.DateTime" xmlType="xs:date"
+            parseMethod="gov.usgs.cida.aquarius.JodaDateConverter.parseDate"
+            printMethod="gov.usgs.cida.aquarius.JodaDateConverter.printDate"/>
 	</jaxb:globalBindings>
 </jaxb:bindings>
