@@ -11,8 +11,8 @@
   <xs:complexType name="Attachment">
     <xs:sequence>
       <xs:element minOccurs="0" name="AttachmentType" xmlns:q1="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.Enum" type="q1:AttachmentType" />
-      <xs:element minOccurs="0" name="DateCreated" nillable="true" xmlns:q2="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="DateUploaded" nillable="true" xmlns:q3="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateCreated" nillable="true" xmlns:q2="http://schemas.datacontract.org/2004/07/System" type="q2:DateTimeOffset" />
+      <xs:element minOccurs="0" name="DateUploaded" nillable="true" xmlns:q3="http://schemas.datacontract.org/2004/07/System" type="q3:DateTimeOffset" />
       <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -24,7 +24,7 @@
       <xs:element minOccurs="0" name="ControlCleaned" xmlns:q4="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.Enum" type="q4:ControlCleanedType" />
       <xs:element minOccurs="0" name="ControlCode" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ControlCondition" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DateCleaned" nillable="true" xmlns:q5="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateCleaned" nillable="true" xmlns:q5="http://schemas.datacontract.org/2004/07/System" type="q5:DateTimeOffset" />
       <xs:element minOccurs="0" name="DistanceToGage" nillable="true" type="tns:UnitWithValue" />
       <xs:element minOccurs="0" name="FlowOverControl" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
@@ -102,12 +102,12 @@
       <xs:element minOccurs="0" name="DeploymentMethod" xmlns:q10="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.Enum" type="q10:DeploymentMethodType" />
       <xs:element minOccurs="0" name="Discharge" nillable="true" type="tns:UnitWithValue" />
       <xs:element minOccurs="0" name="DistanceToGage" nillable="true" type="tns:UnitWithValue" />
-      <xs:element minOccurs="0" name="EndTime" nillable="true" xmlns:q11="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndTime" nillable="true" xmlns:q11="http://schemas.datacontract.org/2004/07/System" type="q11:DateTimeOffset" />
       <xs:element minOccurs="0" name="HorizontalFlow" xmlns:q12="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.Enum" type="q12:HorizontalFlowType" />
       <xs:element minOccurs="0" name="MeasurementLocationToGage" xmlns:q13="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.Enum" type="q13:MeasurementLocationToGageType" />
       <xs:element minOccurs="0" name="MonitoringMethod" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Party" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StartTime" nillable="true" xmlns:q14="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" xmlns:q14="http://schemas.datacontract.org/2004/07/System" type="q14:DateTimeOffset" />
       <xs:element minOccurs="0" name="VerticalVelocity" xmlns:q15="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.Enum" type="q15:VelocityDistributionType" />
       <xs:element minOccurs="0" name="VerticalVelocityDistribution" xmlns:q16="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.Enum" type="q16:VerticalVelocityDistributionType" />
     </xs:sequence>
@@ -128,9 +128,9 @@
       <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
       <xs:element minOccurs="0" name="MeanGageHeight" nillable="true" type="tns:UnitWithValue" />
       <xs:element minOccurs="0" name="MeanIndexVelocity" nillable="true" type="tns:UnitWithValue" />
-      <xs:element minOccurs="0" name="MeasurementEndTime" nillable="true" xmlns:q20="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MeasurementEndTime" nillable="true" xmlns:q20="http://schemas.datacontract.org/2004/07/System" type="q20:DateTimeOffset" />
       <xs:element minOccurs="0" name="MeasurementGrade" xmlns:q21="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.Enum" type="q21:MeasurementGradeType" />
-      <xs:element minOccurs="0" name="MeasurementStartTime" nillable="true" xmlns:q22="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MeasurementStartTime" nillable="true" xmlns:q22="http://schemas.datacontract.org/2004/07/System" type="q22:DateTimeOffset" />
       <xs:element minOccurs="0" name="Party" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Publish" type="xs:boolean" />
       <xs:element minOccurs="0" name="Reviewer" nillable="true" type="xs:string" />
@@ -155,7 +155,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="GageHeight" nillable="true" type="xs:double" />
       <xs:element minOccurs="0" name="IsUsed" type="xs:boolean" />
-      <xs:element minOccurs="0" name="ReadingTime" nillable="true" xmlns:q25="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReadingTime" nillable="true" xmlns:q25="http://schemas.datacontract.org/2004/07/System" type="q25:DateTimeOffset" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="GageHeightReading" nillable="true" type="tns:GageHeightReading" />
@@ -259,12 +259,12 @@
   <xs:element name="VolumetricDischargeReading" nillable="true" type="tns:VolumetricDischargeReading" />
   <xs:complexType name="GageHeightAtZeroFlowActivity">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ApplicableSince" nillable="true" xmlns:q29="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ApplicableSince" nillable="true" xmlns:q29="http://schemas.datacontract.org/2004/07/System" type="q29:DateTimeOffset" />
       <xs:element minOccurs="0" name="CalculatedDetails" nillable="true" type="tns:GageHeightAtZeroFlowCalculatedDetails" />
       <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IsObserved" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
-      <xs:element minOccurs="0" name="ObservedDate" nillable="true" xmlns:q30="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ObservedDate" nillable="true" xmlns:q30="http://schemas.datacontract.org/2004/07/System" type="q30:DateTimeOffset" />
       <xs:element minOccurs="0" name="Party" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ZeroFlowHeight" nillable="true" type="xs:double" />
@@ -311,7 +311,7 @@
       <xs:element minOccurs="0" name="Standard" nillable="true" type="xs:double" />
       <xs:element minOccurs="0" name="StandardDetails" nillable="true" type="tns:StandardDetails" />
       <xs:element minOccurs="0" name="SubLocationIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Time" nillable="true" xmlns:q32="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Time" nillable="true" xmlns:q32="http://schemas.datacontract.org/2004/07/System" type="q32:DateTimeOffset" />
       <xs:element minOccurs="0" name="Units" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Value" nillable="true" type="xs:double" />
     </xs:sequence>
@@ -319,7 +319,7 @@
   <xs:element name="CalibrationCheck" nillable="true" type="tns:CalibrationCheck" />
   <xs:complexType name="StandardDetails">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ExpirationDate" nillable="true" xmlns:q33="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExpirationDate" nillable="true" xmlns:q33="http://schemas.datacontract.org/2004/07/System" type="q33:DateTimeOffset" />
       <xs:element minOccurs="0" name="LotNumber" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="StandardCode" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Temperature" type="xs:double" />
@@ -340,7 +340,7 @@
       <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SubLocationIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Time" nillable="true" xmlns:q35="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Time" nillable="true" xmlns:q35="http://schemas.datacontract.org/2004/07/System" type="q35:DateTimeOffset" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Inspection" nillable="true" type="tns:Inspection" />
@@ -363,7 +363,7 @@
       <xs:element minOccurs="0" name="ReadingType" xmlns:q36="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.Enum" type="q36:ReadingType" />
       <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SubLocationIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Time" nillable="true" xmlns:q37="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Time" nillable="true" xmlns:q37="http://schemas.datacontract.org/2004/07/System" type="q37:DateTimeOffset" />
       <xs:element minOccurs="0" name="Uncertainty" nillable="true" type="xs:double" />
       <xs:element minOccurs="0" name="Units" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Value" nillable="true" type="xs:double" />

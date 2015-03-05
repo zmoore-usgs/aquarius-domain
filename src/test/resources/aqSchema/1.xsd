@@ -17,16 +17,16 @@
   <xs:element name="QualifierListServiceRequest" nillable="true" type="tns:QualifierListServiceRequest" />
   <xs:complexType name="UpchainProcessorListByTimeSeriesServiceRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q1="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q2="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q1="http://schemas.datacontract.org/2004/07/System" type="q1:DateTimeOffset" />
+      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q2="http://schemas.datacontract.org/2004/07/System" type="q2:DateTimeOffset" />
       <xs:element minOccurs="0" name="TimeSeriesIdentifier" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="UpchainProcessorListByTimeSeriesServiceRequest" nillable="true" type="tns:UpchainProcessorListByTimeSeriesServiceRequest" />
   <xs:complexType name="DownchainProcessorListByTimeSeriesServiceRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q3="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q4="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q3="http://schemas.datacontract.org/2004/07/System" type="q3:DateTimeOffset" />
+      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q4="http://schemas.datacontract.org/2004/07/System" type="q4:DateTimeOffset" />
       <xs:element minOccurs="0" name="TimeSeriesIdentifier" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -60,8 +60,8 @@
   <xs:element name="GradeListServiceRequest" nillable="true" type="tns:GradeListServiceRequest" />
   <xs:complexType name="CorrectionListServiceRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q7="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q8="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q7="http://schemas.datacontract.org/2004/07/System" type="q7:DateTimeOffset" />
+      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q8="http://schemas.datacontract.org/2004/07/System" type="q8:DateTimeOffset" />
       <xs:element minOccurs="0" name="TimeSeriesIdentifier" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -83,8 +83,8 @@
   <xs:element name="FieldVisitDataServiceRequest" nillable="true" type="tns:FieldVisitDataServiceRequest" />
   <xs:complexType name="RatingModelEffectiveShiftsServiceRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q9="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q10="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q9="http://schemas.datacontract.org/2004/07/System" type="q9:DateTimeOffset" />
+      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q10="http://schemas.datacontract.org/2004/07/System" type="q10:DateTimeOffset" />
       <xs:element minOccurs="0" name="RatingModelIdentifier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TimeSeriesIdentifier" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -92,8 +92,8 @@
   <xs:element name="RatingModelEffectiveShiftsServiceRequest" nillable="true" type="tns:RatingModelEffectiveShiftsServiceRequest" />
   <xs:complexType name="TimeSeriesApprovalsTransactionListServiceRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q11="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q12="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q11="http://schemas.datacontract.org/2004/07/System" type="q11:DateTimeOffset" />
+      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q12="http://schemas.datacontract.org/2004/07/System" type="q12:DateTimeOffset" />
       <xs:element minOccurs="0" name="TimeSeriesIdentifier" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -121,14 +121,14 @@
       <xs:element minOccurs="0" name="ChangesSinceToken" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="IncludeInvalidFieldVisits" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="LocationIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q13="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q14="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q13="http://schemas.datacontract.org/2004/07/System" type="q13:DateTimeOffset" />
+      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q14="http://schemas.datacontract.org/2004/07/System" type="q14:DateTimeOffset" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="FieldVisitDescriptionListServiceRequest" nillable="true" type="tns:FieldVisitDescriptionListServiceRequest" />
   <xs:complexType name="EffectiveRatingCurveServiceRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="EffectiveTime" nillable="true" xmlns:q15="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EffectiveTime" nillable="true" xmlns:q15="http://schemas.datacontract.org/2004/07/System" type="q15:DateTimeOffset" />
       <xs:element minOccurs="0" name="EndValue" nillable="true" type="xs:double" />
       <xs:element minOccurs="0" name="InputUnit" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OutputUnit" nillable="true" type="xs:string" />
@@ -159,8 +159,8 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="ApplyRounding" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="GetParts" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q17="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q18="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q17="http://schemas.datacontract.org/2004/07/System" type="q17:DateTimeOffset" />
+      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q18="http://schemas.datacontract.org/2004/07/System" type="q18:DateTimeOffset" />
       <xs:element minOccurs="0" name="TimeSeriesIdentifier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UtcOffset" nillable="true" type="xs:double" />
@@ -171,8 +171,8 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="ApplyRounding" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="GetParts" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q19="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q20="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q19="http://schemas.datacontract.org/2004/07/System" type="q19:DateTimeOffset" />
+      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q20="http://schemas.datacontract.org/2004/07/System" type="q20:DateTimeOffset" />
       <xs:element minOccurs="0" name="TimeSeriesIdentifier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UtcOffset" nillable="true" type="xs:double" />
@@ -192,7 +192,7 @@
   <xs:element name="RatingModelDescriptionListServiceRequest" nillable="true" type="tns:RatingModelDescriptionListServiceRequest" />
   <xs:complexType name="RatingModelInputValuesServiceRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="EffectiveTime" nillable="true" xmlns:q21="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EffectiveTime" nillable="true" xmlns:q21="http://schemas.datacontract.org/2004/07/System" type="q21:DateTimeOffset" />
       <xs:element minOccurs="0" name="OutputValues" nillable="true" xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" type="q22:ArrayOfdouble" />
       <xs:element minOccurs="0" name="RatingModelIdentifier" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -201,7 +201,7 @@
   <xs:complexType name="RatingModelOutputValuesServiceRequest">
     <xs:sequence>
       <xs:element minOccurs="0" name="ApplyShifts" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="EffectiveTime" nillable="true" xmlns:q23="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EffectiveTime" nillable="true" xmlns:q23="http://schemas.datacontract.org/2004/07/System" type="q23:DateTimeOffset" />
       <xs:element minOccurs="0" name="InputValues" nillable="true" xmlns:q24="http://schemas.microsoft.com/2003/10/Serialization/Arrays" type="q24:ArrayOfdouble" />
       <xs:element minOccurs="0" name="RatingModelIdentifier" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -209,8 +209,8 @@
   <xs:element name="RatingModelOutputValuesServiceRequest" nillable="true" type="tns:RatingModelOutputValuesServiceRequest" />
   <xs:complexType name="RatingCurveListServiceRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q25="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q26="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryFrom" nillable="true" xmlns:q25="http://schemas.datacontract.org/2004/07/System" type="q25:DateTimeOffset" />
+      <xs:element minOccurs="0" name="QueryTo" nillable="true" xmlns:q26="http://schemas.datacontract.org/2004/07/System" type="q26:DateTimeOffset" />
       <xs:element minOccurs="0" name="RatingModelIdentifier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UtcOffset" nillable="true" type="xs:double" />
     </xs:sequence>

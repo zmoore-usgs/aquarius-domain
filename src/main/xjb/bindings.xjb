@@ -3,7 +3,9 @@
 			   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<jaxb:globalBindings 
 		collectionType="java.util.ArrayList"
-		generateElementProperty="false">
+		generateElementProperty="false"
+		enableJavaNamingConventions="false"
+		underscoreBinding="asCharInWord">
 		<!-- use JODA-Time DateTime for xs:date -->
 		<jaxb:javaType name="org.joda.time.DateTime" xmlType="xs:date"
 					   parseMethod="gov.usgs.cida.aquarius.JodaDateConverter.parseDate"
