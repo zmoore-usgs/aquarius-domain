@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <jaxb:bindings version="2.0" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
 			   xmlns:xs="http://www.w3.org/2001/XMLSchema">
-   
 	<jaxb:globalBindings 
 		collectionType="java.util.ArrayList"
-		generateElementProperty="false">
+		generateElementProperty="false"
+		enableJavaNamingConventions="false"
+		underscoreBinding="asCharInWord">
 		<!-- use JODA-Time DateTime for xs:date -->
 		<jaxb:javaType name="org.joda.time.DateTime" xmlType="xs:date"
+					   parseMethod="gov.usgs.cida.aquarius.JodaDateConverter.parseDate"
+					   printMethod="gov.usgs.cida.aquarius.JodaDateConverter.printDate"/>
+		
+		
+		<!-- use JODA-Time DateTime for sys:DateTimeOffset -->
+		<jaxb:javaType name="org.joda.time.DateTime" xmlType="xs:dateTime"
 					   parseMethod="gov.usgs.cida.aquarius.JodaDateConverter.parseDate"
 					   printMethod="gov.usgs.cida.aquarius.JodaDateConverter.printDate"/>
 	</jaxb:globalBindings>

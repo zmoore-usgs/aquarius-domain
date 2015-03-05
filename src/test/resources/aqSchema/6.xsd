@@ -22,7 +22,7 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Authenticate" nillable="true" type="tns:Authenticate" />
-  <xs:complexType name="AuthenticateResponseObj">
+  <xs:complexType name="AuthenticateResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SessionId" nillable="true" type="xs:string" />
@@ -33,5 +33,5 @@
       <xs:element minOccurs="0" name="Meta" nillable="true" xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" type="q3:ArrayOfKeyValueOfstringstring" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="AuthenticateResponseObj" nillable="true" type="tns:AuthenticateResponseObj" />
+  <xs:element name="AuthenticateResponse" nillable="true" type="tns:AuthenticateResponse" />
 </xs:schema>
