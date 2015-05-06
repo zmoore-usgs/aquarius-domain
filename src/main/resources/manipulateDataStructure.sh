@@ -2,7 +2,7 @@
 XSD_DIRECTORY=target/generated-sources/aqSchema
 bak=""
 if [[ `uname` == "Darwin" ]]; then
-bak=".bak' "
+bak=".bak "
 fi
 
 sed -i -r $bak 's/type="q[^:]+:DateTimeOffset"/type="xs:dateTime"/g' $XSD_DIRECTORY/*.xsd
