@@ -16,5 +16,10 @@
 		<jaxb:javaType name="org.joda.time.DateTime" xmlType="xs:dateTime"
 					   parseMethod="gov.usgs.cida.aquarius.JodaDateConverter.parseDate"
 					   printMethod="gov.usgs.cida.aquarius.JodaDateConverter.printDate"/>
+		
+		<!-- use BigDecimal for xs:double -->
+		<jaxb:javaType name="java.math.BigDecimal" xmlType="xs:double"
+					   parseMethod="gov.usgs.cida.aquarius.BigDecimalConverter.parseBigDecimal"
+					   printMethod="gov.usgs.cida.aquarius.BigDecimalConverter.printBigDecimal"/>
 	</jaxb:globalBindings>
 </jaxb:bindings>
