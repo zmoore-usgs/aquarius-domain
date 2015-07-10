@@ -5,7 +5,6 @@ if [[ `uname` == "Darwin" ]]; then
 sedArg=" -i.bak -E "
 fi
 
-sed $sedArg 's/type="q[^:]+:StatisticalDateTimeOffset"/type="xs:dateTime"/g' $XSD_DIRECTORY/*.xsd
 sed $sedArg 's/type="q[^:]+:DateTimeOffset"/type="xs:dateTime"/g' $XSD_DIRECTORY/*.xsd
 sed $sedArg 's/type="q[^:]+:ArrayOfstring"/type="xs:string" maxOccurs="unbounded"/g' $XSD_DIRECTORY/*.xsd
 sed $sedArg 's/type="q[^:]+:ArrayOfdouble"/type="xs:double" maxOccurs="unbounded"/g' $XSD_DIRECTORY/*.xsd
