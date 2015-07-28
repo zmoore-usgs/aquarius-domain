@@ -22,6 +22,14 @@
 			<organizationUrl>http://cida.usgs.gov</organizationUrl>
 			<timezone>-6</timezone>
 		</developer>
+		<developer>
+			<name>Phethala Thongsavanh</name>
+			<email>thongsav@usgs.gov</email>
+			<id>thongsav</id>
+			<organization>Center for Integrated Data Analytics</organization>
+			<organizationUrl>http://cida.usgs.gov</organizationUrl>
+			<timezone>-6</timezone>
+		</developer>
 	</developers>
 	
 	<licenses>
