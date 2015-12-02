@@ -23,17 +23,12 @@ public class JodaDateConverter {
 	public static DateTime parseDate(String value) {
 		DateTime result = null;
 		if (null != value) {
-                    String[] splitValue = value.split("T");
-                    //Check if hours equals 24. Replace 24 with 00 and increment day.
-                    if(splitValue[1].substring(0, 2).equals("24")){
-                        String changedTime = splitValue[0] + "T00" + splitValue[1].substring(2);
-                        result = ISODateTimeFormat.dateTime().parseDateTime(changedTime);
-                        result = result.plusDays(1);
+                    String newValue = value.replaceFirst("T24:00", "T00:00");
+                    result = ISODateTimeFormat.dateTime().parseDateTime(newValue);
+                    if(!newValue.equals(value)){
+                        result.plusDays(1);
                     }
-                    else {
-                        result = ISODateTimeFormat.dateTime().parseDateTime(value);
-                    }
-		}
-		return result;
+                }
+                return result;
 	}
 }
