@@ -23,12 +23,16 @@ public class JodaDateConverter {
 	public static DateTime parseDate(String value) {
 		DateTime result = null;
 		if (null != value) {
-                    String newValue = value.replaceFirst("T24:00", "T00:00");
-                    result = ISODateTimeFormat.dateTime().parseDateTime(newValue);
-                    if(!newValue.equals(value)){
-                        result = result.plusDays(1);
-                    }
-                }
-                return result;
+			try {
+			String newValue = value.replaceFirst("T24:00", "T00:00");
+			result = ISODateTimeFormat.dateTime().parseDateTime(newValue);
+			if(!newValue.equals(value)){
+				result = result.plusDays(1);
+			}
+			} catch (Exception e) {
+				log.warn("Problem parsing date string " + value + ", null is being returned.", e);
+			}
+		}
+		return result;
 	}
 }
