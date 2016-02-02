@@ -25,7 +25,7 @@ public class JodaDateConverter {
 		if (null != value) {
 			try {
 			String newValue = value.replaceFirst("T24:00", "T00:00");
-			result = ISODateTimeFormat.dateTime().parseDateTime(newValue);
+			result = ISODateTimeFormat.dateTime().withOffsetParsed().parseDateTime(newValue);
 			if(!newValue.equals(value)){
 				result = result.plusDays(1);
 			}
