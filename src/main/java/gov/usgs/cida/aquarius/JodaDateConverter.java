@@ -1,6 +1,7 @@
 package gov.usgs.cida.aquarius;
 
 import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,11 +12,12 @@ import org.slf4j.LoggerFactory;
  */
 public class JodaDateConverter {
 	private static final Logger log = LoggerFactory.getLogger(JodaDateConverter.class);
+	private static DateTimeFormatter timeFormat = ISODateTimeFormat.dateTime().withOffsetParsed();
 
 	public static String printDate(DateTime value) {
 		String result = null;
 		if (null != value) {
-			result = value.toString(ISODateTimeFormat.dateTime());
+			result = value.toString(timeFormat);
 		}
 		return result;
 	}
@@ -25,7 +27,7 @@ public class JodaDateConverter {
 		if (null != value) {
 			try {
 			String newValue = value.replaceFirst("T24:00", "T00:00");
-			result = ISODateTimeFormat.dateTime().withOffsetParsed().parseDateTime(newValue);
+			result = timeFormat.parseDateTime(newValue);
 			if(!newValue.equals(value)){
 				result = result.plusDays(1);
 			}
