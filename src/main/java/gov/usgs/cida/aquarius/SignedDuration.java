@@ -38,7 +38,8 @@ public class SignedDuration implements ReadableDuration {
 
 	@Override
 	public long getMillis() {
-		return duration.getMillis();
+		long signedDuration = duration.getMillis();
+		return sign.equals("-") ? -1 * signedDuration : signedDuration;
 	}
 
 	@Override
