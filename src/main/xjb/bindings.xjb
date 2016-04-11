@@ -21,5 +21,11 @@
 		<jaxb:javaType name="java.math.BigDecimal" xmlType="xs:double"
 					   parseMethod="gov.usgs.cida.aquarius.BigDecimalConverter.parseBigDecimal"
 					   printMethod="gov.usgs.cida.aquarius.BigDecimalConverter.printBigDecimal"/>
+		
+		
+		<!-- use JODA-Time DateTime for xs:date -->
+		<jaxb:javaType name="gov.usgs.cida.aquarius.SignedDuration" xmlType="xs:duration"
+					   parseMethod="gov.usgs.cida.aquarius.SignedDurationConverter.parseDuration"
+					   printMethod="gov.usgs.cida.aquarius.SignedDurationConverter.printDuration"/>
 	</jaxb:globalBindings>
 </jaxb:bindings>

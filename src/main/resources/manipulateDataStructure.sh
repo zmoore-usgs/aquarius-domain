@@ -7,6 +7,7 @@ fi
 
 sed $sedArg 's/type="tns:StatisticalDateTimeOffset"/type="xs:dateTime"/g' $XSD_DIRECTORY/*.xsd
 sed $sedArg 's/type="q[^:]+:DateTimeOffset"/type="xs:dateTime"/g' $XSD_DIRECTORY/*.xsd
+sed $sedArg 's/type="q[^:]+:Offset"/type="xs:string"/g' $XSD_DIRECTORY/*.xsd
 sed $sedArg 's/type="q[^:]+:ArrayOfstring"/type="xs:string" maxOccurs="unbounded"/g' $XSD_DIRECTORY/*.xsd
 sed $sedArg 's/type="q[^:]+:ArrayOfdouble"/type="xs:double" maxOccurs="unbounded"/g' $XSD_DIRECTORY/*.xsd
 sed $sedArg 's/type="q[^:]+:ArrayOfNullableOfdouble"/type="xs:double" maxOccurs="unbounded"/g' $XSD_DIRECTORY/*.xsd
