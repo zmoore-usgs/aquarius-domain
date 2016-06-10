@@ -1,5 +1,5 @@
 #!/bin/bash
-XSD_DIRECTORY=/d/target/generated-sources/aqSchema
+XSD_DIRECTORY=target/generated-sources/aqSchema
 
 pwd
 mkdir -p $XSD_DIRECTORY
