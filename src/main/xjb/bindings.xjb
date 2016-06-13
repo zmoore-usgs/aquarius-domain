@@ -6,14 +6,14 @@
 		generateElementProperty="false"
 		enableJavaNamingConventions="false"
 		underscoreBinding="asCharInWord">
-		<!-- use JODA-Time DateTime for xs:date -->
-		<jaxb:javaType name="org.joda.time.DateTime" xmlType="xs:date"
+		<!-- use wrapper DateTime that remembers 2400 and uses 0000 internally for xs:date -->
+		<jaxb:javaType name="gov.usgs.cida.aquarius.AggregatedDateTime" xmlType="xs:date"
 					   parseMethod="gov.usgs.cida.aquarius.JodaDateConverter.parseDate"
 					   printMethod="gov.usgs.cida.aquarius.JodaDateConverter.printDate"/>
 		
 		
-		<!-- use JODA-Time DateTime for sys:DateTimeOffset -->
-		<jaxb:javaType name="org.joda.time.DateTime" xmlType="xs:dateTime"
+		<!-- use wrapper DateTime that remembers 2400 and uses 0000 internally xs:dateTime -->
+		<jaxb:javaType name="gov.usgs.cida.aquarius.AggregatedDateTime" xmlType="xs:dateTime"
 					   parseMethod="gov.usgs.cida.aquarius.JodaDateConverter.parseDate"
 					   printMethod="gov.usgs.cida.aquarius.JodaDateConverter.printDate"/>
 		
@@ -23,7 +23,7 @@
 					   printMethod="gov.usgs.cida.aquarius.BigDecimalConverter.printBigDecimal"/>
 		
 		
-		<!-- use JODA-Time DateTime for xs:date -->
+		<!-- use a wrapper SignedDuration that remembers the sign passed in on the duration for xs:duration -->
 		<jaxb:javaType name="gov.usgs.cida.aquarius.SignedDuration" xmlType="xs:duration"
 					   parseMethod="gov.usgs.cida.aquarius.SignedDurationConverter.parseDuration"
 					   printMethod="gov.usgs.cida.aquarius.SignedDurationConverter.printDuration"/>
