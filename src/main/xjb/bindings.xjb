@@ -7,13 +7,13 @@
 		enableJavaNamingConventions="false"
 		underscoreBinding="asCharInWord">
 		<!-- use wrapper DateTime that remembers 2400 and uses 0000 internally for xs:date -->
-		<jaxb:javaType name="gov.usgs.cida.aquarius.AggregatedDateTime" xmlType="xs:date"
+		<jaxb:javaType name="org.joda.time.Partial" xmlType="xs:date"
 					   parseMethod="gov.usgs.cida.aquarius.JodaDateConverter.parseDate"
 					   printMethod="gov.usgs.cida.aquarius.JodaDateConverter.printDate"/>
 		
 		
 		<!-- use wrapper DateTime that remembers 2400 and uses 0000 internally xs:dateTime -->
-		<jaxb:javaType name="gov.usgs.cida.aquarius.AggregatedDateTime" xmlType="xs:dateTime"
+		<jaxb:javaType name="org.joda.time.Partial" xmlType="xs:dateTime"
 					   parseMethod="gov.usgs.cida.aquarius.JodaDateConverter.parseDate"
 					   printMethod="gov.usgs.cida.aquarius.JodaDateConverter.printDate"/>
 		
