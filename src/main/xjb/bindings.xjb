@@ -24,8 +24,8 @@
 		
 		
 		<!-- use a wrapper SignedDuration that remembers the sign passed in on the duration for xs:duration -->
-		<jaxb:javaType name="gov.usgs.cida.aquarius.SignedDuration" xmlType="xs:duration"
-					   parseMethod="gov.usgs.cida.aquarius.SignedDurationConverter.parseDuration"
-					   printMethod="gov.usgs.cida.aquarius.SignedDurationConverter.printDuration"/>
+		<jaxb:javaType name="java.time.Duration" xmlType="xs:duration"
+					   parseMethod="gov.usgs.cida.aquarius.DurationConverter.parseDuration"
+					   printMethod="gov.usgs.cida.aquarius.DurationConverter.printDuration"/>
 	</jaxb:globalBindings>
 </jaxb:bindings>
