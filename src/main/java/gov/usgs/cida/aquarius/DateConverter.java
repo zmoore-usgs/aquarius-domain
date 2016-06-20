@@ -20,6 +20,8 @@ public class DateConverter {
 	private static DateTimeFormatter timeFormat = DateTimeFormatter.ISO_OFFSET_DATE_TIME;
 	private static DateTimeFormatter dateFormat = DateTimeFormatter.ISO_LOCAL_DATE;
 	
+	private static final String DATE_FORMAT = "\\d\\d\\d\\d-\\d\\d-\\d\\d"; 
+	
 	private final static String AGGREGATED_TIME_MARKER = "T24:00";
 	private final static String AGGREGATED_TIME_REPLACEMENT = "T00:00";
 
@@ -44,6 +46,9 @@ public class DateConverter {
 			try {
 				if(value.contains(AGGREGATED_TIME_MARKER)) { //This represents a daily value, or other non-instant time
 					TemporalAccessor parsedDate = timeFormat.parse(value.replace(AGGREGATED_TIME_MARKER, AGGREGATED_TIME_REPLACEMENT));
+					result = LocalDate.from(parsedDate);
+				} else if(value.matches(DATE_FORMAT)){
+					TemporalAccessor parsedDate = dateFormat.parse(value);
 					result = LocalDate.from(parsedDate);
 				} else { //This should represent a DateTime as closely as possible
 					TemporalAccessor parsedDateTime = timeFormat.parse(value);
