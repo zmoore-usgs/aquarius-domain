@@ -4,7 +4,7 @@
 	
 	<groupId>gov.usgs.cida</groupId>
 	<artifactId>aquarius-domain</artifactId>
-	<version>16.1.105-1</version>
+	<version>16.1.105-2-SNAPSHOT</version>
 	
 	<packaging>jar</packaging>
 	
@@ -48,7 +48,7 @@
 		<url>https://github.com/USGS-CIDA/aquarius-domain</url>
 		<connection>scm:git:ssh://git@github.com/USGS-CIDA/aquarius-domain.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/USGS-CIDA/aquarius-domain.git</developerConnection>
-		<tag>aquarius-domain-16.1.105-1</tag>
+		<tag>HEAD</tag>
 	</scm>
 	
 	<properties>
