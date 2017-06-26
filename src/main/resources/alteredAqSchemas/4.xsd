@@ -1,581 +1,95 @@
 <?xml version="1.0"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-  <xs:import namespace="http://schemas.datacontract.org/2004/07/System" />
-  <xs:import namespace="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit" />
-  <xs:complexType name="ArrayOfExtendedAttributeFilter">
+<xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.servicestack.net/types" />
+  <xs:complexType name="ArrayOfdouble">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExtendedAttributeFilter" nillable="true" type="tns:ExtendedAttributeFilter" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="double" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfExtendedAttributeFilter" nillable="true" type="tns:ArrayOfExtendedAttributeFilter" />
-  <xs:complexType name="ExtendedAttributeFilter">
+  <xs:element name="ArrayOfdouble" nillable="true" type="tns:ArrayOfdouble" />
+  <xs:complexType name="ArrayOfguid">
     <xs:sequence>
-      <xs:element minOccurs="0" name="FilterName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FilterValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="guid" type="ser:guid" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ExtendedAttributeFilter" nillable="true" type="tns:ExtendedAttributeFilter" />
-  <xs:complexType name="ArrayOfApprovalMetadata">
+  <xs:element name="ArrayOfguid" nillable="true" type="tns:ArrayOfguid" />
+  <xs:complexType name="ArrayOfKeyValueOfstringstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApprovalMetadata" nillable="true" type="tns:ApprovalMetadata" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfstringstring">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Key" nillable="true" type="xs:string" />
+            <xs:element name="Value" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfApprovalMetadata" nillable="true" type="tns:ArrayOfApprovalMetadata" />
-  <xs:complexType name="ApprovalMetadata">
+  <xs:element name="ArrayOfKeyValueOfstringstring" nillable="true" type="tns:ArrayOfKeyValueOfstringstring" />
+  <xs:complexType name="ArrayOfKeyValueOfstringanyType">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
     <xs:sequence>
-      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfstringanyType">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Key" nillable="true" type="xs:string" />
+            <xs:element name="Value" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ApprovalMetadata" nillable="true" type="tns:ApprovalMetadata" />
-  <xs:complexType name="ArrayOfMonitoringMethod">
+  <xs:element name="ArrayOfKeyValueOfstringanyType" nillable="true" type="tns:ArrayOfKeyValueOfstringanyType" />
+  <xs:complexType name="ArrayOfstring">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="MonitoringMethod" nillable="true" type="tns:MonitoringMethod" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfMonitoringMethod" nillable="true" type="tns:ArrayOfMonitoringMethod" />
-  <xs:complexType name="MonitoringMethod">
+  <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring" />
+  <xs:complexType name="ArrayOfKeyValueOfstringSwaggerModelEdXdwojR">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
     <xs:sequence>
-      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MethodCode" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Parameter" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="RoundingSpec" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfstringSwaggerModelEdXdwojR">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Key" nillable="true" type="xs:string" />
+            <xs:element name="Value" nillable="true" xmlns:q1="http://schemas.servicestack.net/types" type="q1:SwaggerModel" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="MonitoringMethod" nillable="true" type="tns:MonitoringMethod" />
-  <xs:complexType name="ArrayOfQualifierMetadata">
+  <xs:element name="ArrayOfKeyValueOfstringSwaggerModelEdXdwojR" nillable="true" type="tns:ArrayOfKeyValueOfstringSwaggerModelEdXdwojR" />
+  <xs:complexType name="ArrayOfKeyValueOfstringSwaggerPropertyEdXdwojR">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="QualifierMetadata" nillable="true" type="tns:QualifierMetadata" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfstringSwaggerPropertyEdXdwojR">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Key" nillable="true" type="xs:string" />
+            <xs:element name="Value" nillable="true" xmlns:q2="http://schemas.servicestack.net/types" type="q2:SwaggerProperty" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfQualifierMetadata" nillable="true" type="tns:ArrayOfQualifierMetadata" />
-  <xs:complexType name="QualifierMetadata">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="QualifierMetadata" nillable="true" type="tns:QualifierMetadata" />
-  <xs:complexType name="ArrayOfProcessor">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Processor" nillable="true" type="tns:Processor" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfProcessor" nillable="true" type="tns:ArrayOfProcessor" />
-  <xs:complexType name="Processor">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="InputRatingModelIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="InputTimeSeriesIdentifiers" nillable="true" xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" type="xs:string" maxOccurs="unbounded" />
-      <xs:element minOccurs="0" name="OutputTimeSeriesIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ProcessorPeriod" nillable="true" type="tns:TimeRange" />
-      <xs:element minOccurs="0" name="ProcessorType" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Settings" nillable="true" xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" type="q2:ArrayOfKeyValueOfstringstring" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Processor" nillable="true" type="tns:Processor" />
-  <xs:complexType name="TimeRange">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EndTime" xmlns:q3="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="StartTime" xmlns:q4="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="TimeRange" nillable="true" type="tns:TimeRange" />
-  <xs:complexType name="ArrayOfTimeSeriesDescription">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimeSeriesDescription" nillable="true" type="tns:TimeSeriesDescription" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfTimeSeriesDescription" nillable="true" type="tns:ArrayOfTimeSeriesDescription" />
-  <xs:complexType name="TimeSeriesDescription">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ComputationIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ComputationPeriodIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="EndTime" xmlns:q5="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="ExtendedAttributes" nillable="true" type="tns:ExtendedAttribute" maxOccurs="unbounded" />
-      <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LastModified" xmlns:q6="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="LocationIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="NumPoints" type="xs:long" />
-      <xs:element minOccurs="0" name="Parameter" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Publish" type="xs:boolean" />
-      <xs:element minOccurs="0" name="StartTime" xmlns:q7="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="SubLocationIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="TimeSeriesType" type="tns:AtomType" />
-      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="TimeSeriesDescription" nillable="true" type="tns:TimeSeriesDescription" />
-  <xs:complexType name="ArrayOfExtendedAttribute">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExtendedAttribute" nillable="true" type="tns:ExtendedAttribute" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfExtendedAttribute" nillable="true" type="tns:ArrayOfExtendedAttribute" />
-  <xs:complexType name="ExtendedAttribute">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ExtendedAttribute" nillable="true" type="tns:ExtendedAttribute" />
-  <xs:simpleType name="AtomType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="TimeSeries_Basic" />
-      <xs:enumeration value="TimeSeries_Field_Visit" />
-      <xs:enumeration value="TimeSeries_Composite" />
-      <xs:enumeration value="TimeSeries_Rating_Curve_Derived" />
-      <xs:enumeration value="TimeSeries_Calculated_Derived" />
-      <xs:enumeration value="TimeSeries_External" />
-      <xs:enumeration value="TimeSeries_Statistical_Derived" />
-      <xs:enumeration value="TimeSeries_ProcessorBasic" />
-      <xs:enumeration value="TimeSeries_ProcessorDerived" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="AtomType" nillable="true" type="tns:AtomType" />
-  <xs:complexType name="ArrayOfTimeSeriesIdentifier">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimeSeriesIdentifier" nillable="true" type="tns:TimeSeriesIdentifier" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfTimeSeriesIdentifier" nillable="true" type="tns:ArrayOfTimeSeriesIdentifier" />
-  <xs:complexType name="TimeSeriesIdentifier">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="FirstPointChanged" nillable="true" xmlns:q8="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="HasAttributeChange" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="TimeSeriesIdentifier" nillable="true" type="tns:TimeSeriesIdentifier" />
-  <xs:complexType name="ArrayOfParameterMetadata">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParameterMetadata" nillable="true" type="tns:ParameterMetadata" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfParameterMetadata" nillable="true" type="tns:ArrayOfParameterMetadata" />
-  <xs:complexType name="ParameterMetadata">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="InterpolationType" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="UnitGroupIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="UnitIdentifier" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ParameterMetadata" nillable="true" type="tns:ParameterMetadata" />
-  <xs:complexType name="ArrayOfGradeMetadata">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="GradeMetadata" nillable="true" type="tns:GradeMetadata" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfGradeMetadata" nillable="true" type="tns:ArrayOfGradeMetadata" />
-  <xs:complexType name="GradeMetadata">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="GradeMetadata" nillable="true" type="tns:GradeMetadata" />
-  <xs:complexType name="ArrayOfCorrection">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Correction" nillable="true" type="tns:Correction" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCorrection" nillable="true" type="tns:ArrayOfCorrection" />
-  <xs:complexType name="Correction">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AppliedTime" xmlns:q9="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="EndTime" xmlns:q10="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Parameters" nillable="true" xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" type="q11:ArrayOfKeyValueOfstringstring" />
-      <xs:element minOccurs="0" name="StartTime" xmlns:q12="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Type" type="tns:CorrectionType" />
-      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Correction" nillable="true" type="tns:Correction" />
-  <xs:simpleType name="CorrectionType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Generic" />
-      <xs:enumeration value="Offset" />
-      <xs:enumeration value="USGSMultiPoint" />
-      <xs:enumeration value="RevertToRaw" />
-      <xs:enumeration value="DeleteRegion" />
-      <xs:enumeration value="CopyPaste" />
-      <xs:enumeration value="FillGaps" />
-      <xs:enumeration value="Drift" />
-      <xs:enumeration value="Percent" />
-      <xs:enumeration value="ReplaceWithGap" />
-      <xs:enumeration value="ClockDrift" />
-      <xs:enumeration value="Resample" />
-      <xs:enumeration value="Recession" />
-      <xs:enumeration value="AdjustableTrim" />
-      <xs:enumeration value="ThresholdTrim" />
-      <xs:enumeration value="FlagTrim" />
-      <xs:enumeration value="SingleGap" />
-      <xs:enumeration value="MultiPointDrift" />
-      <xs:enumeration value="Amplification" />
-      <xs:enumeration value="SinglePoint" />
-      <xs:enumeration value="MovingAverage" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="CorrectionType" nillable="true" type="tns:CorrectionType" />
-  <xs:complexType name="ArrayOfLocationMonitoringMethod">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocationMonitoringMethod" nillable="true" type="tns:LocationMonitoringMethod" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfLocationMonitoringMethod" nillable="true" type="tns:ArrayOfLocationMonitoringMethod" />
-  <xs:complexType name="LocationMonitoringMethod">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Method" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Parameter" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SubLocationIdentifier" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="LocationMonitoringMethod" nillable="true" type="tns:LocationMonitoringMethod" />
-  <xs:complexType name="ArrayOfEffectiveShift">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="EffectiveShift" nillable="true" type="tns:EffectiveShift" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEffectiveShift" nillable="true" type="tns:ArrayOfEffectiveShift" />
-  <xs:complexType name="EffectiveShift">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Timestamp" xmlns:q13="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:double" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="EffectiveShift" nillable="true" type="tns:EffectiveShift" />
-  <xs:complexType name="ArrayOfApprovalsTransaction">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApprovalsTransaction" nillable="true" type="tns:ApprovalsTransaction" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfApprovalsTransaction" nillable="true" type="tns:ArrayOfApprovalsTransaction" />
-  <xs:complexType name="ApprovalsTransaction">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:Approval">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="ApprovalsTransaction" nillable="true" type="tns:ApprovalsTransaction" />
-  <xs:complexType name="Approval">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:TimeRange">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="ApprovalLevel" type="xs:int" />
-          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="DateApplied" xmlns:q14="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="LevelDescription" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="Approval" nillable="true" type="tns:Approval" />
-  <xs:complexType name="ArrayOfStagePoint">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="StagePoint" nillable="true" type="tns:StagePoint" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfStagePoint" nillable="true" type="tns:ArrayOfStagePoint" />
-  <xs:complexType name="StagePoint">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CorrectedValue" type="xs:double" />
-      <xs:element minOccurs="0" name="Correction" type="xs:double" />
-      <xs:element minOccurs="0" name="InputValue" type="xs:double" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="StagePoint" nillable="true" type="tns:StagePoint" />
-  <xs:complexType name="ArrayOfFieldVisitDescription">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldVisitDescription" nillable="true" type="tns:FieldVisitDescription" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfFieldVisitDescription" nillable="true" type="tns:ArrayOfFieldVisitDescription" />
-  <xs:complexType name="FieldVisitDescription">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CompletedWork" nillable="true" xmlns:q15="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit" type="q15:CompletedWork" />
-      <xs:element minOccurs="0" name="EndTime" nillable="true" xmlns:q16="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
-      <xs:element minOccurs="0" name="LastModified" xmlns:q17="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="LocationIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Party" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StartTime" nillable="true" xmlns:q18="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Weather" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="FieldVisitDescription" nillable="true" type="tns:FieldVisitDescription" />
-  <xs:complexType name="ExpandedRatingCurve">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AdjustedRatingTable" nillable="true" type="tns:RatingPoint" maxOccurs="unbounded" />
-      <xs:element minOccurs="0" name="Approval" type="xs:int" />
-      <xs:element minOccurs="0" name="BaseRatingTable" nillable="true" type="tns:RatingPoint" maxOccurs="unbounded" />
-      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="InputParameter" nillable="true" type="tns:ParameterWithUnit" />
-      <xs:element minOccurs="0" name="IsBlended" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Offsets" nillable="true" type="tns:OffsetPoint" maxOccurs="unbounded" />
-      <xs:element minOccurs="0" name="OutputParameter" nillable="true" type="tns:ParameterWithUnit" />
-      <xs:element minOccurs="0" name="PeriodsOfApplicability" nillable="true" type="tns:PeriodOfApplicability" maxOccurs="unbounded" />
-      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Shifts" nillable="true" type="tns:RatingShift" maxOccurs="unbounded" />
-      <xs:element minOccurs="0" name="Type" type="tns:RatingCurveType" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ExpandedRatingCurve" nillable="true" type="tns:ExpandedRatingCurve" />
-  <xs:complexType name="ArrayOfRatingPoint">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="RatingPoint" nillable="true" type="tns:RatingPoint" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfRatingPoint" nillable="true" type="tns:ArrayOfRatingPoint" />
-  <xs:complexType name="RatingPoint">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="InputValue" nillable="true" type="xs:double" />
-      <xs:element minOccurs="0" name="OutputValue" nillable="true" type="xs:double" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="RatingPoint" nillable="true" type="tns:RatingPoint" />
-  <xs:complexType name="ParameterWithUnit">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="ParameterName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ParameterUnit" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ParameterWithUnit" nillable="true" type="tns:ParameterWithUnit" />
-  <xs:complexType name="ArrayOfOffsetPoint">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="OffsetPoint" nillable="true" type="tns:OffsetPoint" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfOffsetPoint" nillable="true" type="tns:ArrayOfOffsetPoint" />
-  <xs:complexType name="OffsetPoint">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="InputValue" nillable="true" type="xs:double" />
-      <xs:element minOccurs="0" name="Offset" type="xs:double" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="OffsetPoint" nillable="true" type="tns:OffsetPoint" />
-  <xs:complexType name="ArrayOfPeriodOfApplicability">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="PeriodOfApplicability" nillable="true" type="tns:PeriodOfApplicability" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfPeriodOfApplicability" nillable="true" type="tns:ArrayOfPeriodOfApplicability" />
-  <xs:complexType name="PeriodOfApplicability">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Approval" type="xs:int" />
-      <xs:element minOccurs="0" name="EndTime" xmlns:q19="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StartTime" xmlns:q20="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="PeriodOfApplicability" nillable="true" type="tns:PeriodOfApplicability" />
-  <xs:complexType name="ArrayOfRatingShift">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="RatingShift" nillable="true" type="tns:RatingShift" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfRatingShift" nillable="true" type="tns:ArrayOfRatingShift" />
-  <xs:complexType name="RatingShift">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="PeriodOfApplicability" nillable="true" type="tns:PeriodOfApplicability" />
-      <xs:element minOccurs="0" name="ShiftPoints" nillable="true" type="tns:RatingShiftPoint" maxOccurs="unbounded" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="RatingShift" nillable="true" type="tns:RatingShift" />
-  <xs:complexType name="ArrayOfRatingShiftPoint">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="RatingShiftPoint" nillable="true" type="tns:RatingShiftPoint" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfRatingShiftPoint" nillable="true" type="tns:ArrayOfRatingShiftPoint" />
-  <xs:complexType name="RatingShiftPoint">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="InputValue" type="xs:double" />
-      <xs:element minOccurs="0" name="Shift" type="xs:double" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="RatingShiftPoint" nillable="true" type="tns:RatingShiftPoint" />
-  <xs:simpleType name="RatingCurveType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="LinearTable" />
-      <xs:enumeration value="LogarithmicTable" />
-      <xs:enumeration value="StandardEquation" />
-      <xs:enumeration value="DescriptiveEquation" />
-      <xs:enumeration value="LinearRegressionModel" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="RatingCurveType" nillable="true" type="tns:RatingCurveType" />
-  <xs:complexType name="ArrayOfLocationRemark">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocationRemark" nillable="true" type="tns:LocationRemark" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfLocationRemark" nillable="true" type="tns:ArrayOfLocationRemark" />
-  <xs:complexType name="LocationRemark">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CreateTime" nillable="true" xmlns:q21="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FromTime" nillable="true" xmlns:q22="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ToTime" nillable="true" xmlns:q23="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="LocationRemark" nillable="true" type="tns:LocationRemark" />
-  <xs:complexType name="ArrayOfLocationDescription">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocationDescription" nillable="true" type="tns:LocationDescription" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfLocationDescription" nillable="true" type="tns:ArrayOfLocationDescription" />
-  <xs:complexType name="LocationDescription">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LastModified" xmlns:q24="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="PrimaryFolder" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SecondaryFolders" nillable="true" xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" type="xs:string" maxOccurs="unbounded" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="LocationDescription" nillable="true" type="tns:LocationDescription" />
-  <xs:complexType name="ArrayOfApproval">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Approval" nillable="true" type="tns:Approval" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfApproval" nillable="true" type="tns:ArrayOfApproval" />
-  <xs:complexType name="ArrayOfMethod">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Method" nillable="true" type="tns:Method" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfMethod" nillable="true" type="tns:ArrayOfMethod" />
-  <xs:complexType name="Method">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:TimeRange">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="MethodCode" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="Method" nillable="true" type="tns:Method" />
-  <xs:complexType name="ArrayOfTimeSeriesPoint">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimeSeriesPoint" nillable="true" type="tns:TimeSeriesPoint" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfTimeSeriesPoint" nillable="true" type="tns:ArrayOfTimeSeriesPoint" />
-  <xs:complexType name="TimeSeriesPoint">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Approval" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Interpolation" type="xs:int" />
-      <xs:element minOccurs="0" name="Timestamp" xmlns:q26="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Value" nillable="true" type="tns:DoubleWithDisplay" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="TimeSeriesPoint" nillable="true" type="tns:TimeSeriesPoint" />
-  <xs:complexType name="DoubleWithDisplay">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Display" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Numeric" nillable="true" type="xs:double" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DoubleWithDisplay" nillable="true" type="tns:DoubleWithDisplay" />
-  <xs:complexType name="ArrayOfQualifier">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Qualifier" nillable="true" type="tns:Qualifier" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfQualifier" nillable="true" type="tns:ArrayOfQualifier" />
-  <xs:complexType name="Qualifier">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:TimeRange">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="DateApplied" xmlns:q27="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="Qualifier" nillable="true" type="tns:Qualifier" />
-  <xs:complexType name="ArrayOfRatingModelDescription">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="RatingModelDescription" nillable="true" type="tns:RatingModelDescription" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfRatingModelDescription" nillable="true" type="tns:ArrayOfRatingModelDescription" />
-  <xs:complexType name="RatingModelDescription">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="InputParameter" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="InputUnit" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LastModified" xmlns:q28="http://schemas.datacontract.org/2004/07/System" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="LocationIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="OutputParameter" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="OutputUnit" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Publish" type="xs:boolean" />
-      <xs:element minOccurs="0" name="TemplateName" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="RatingModelDescription" nillable="true" type="tns:RatingModelDescription" />
-  <xs:complexType name="ArrayOfRatingCurve">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="RatingCurve" nillable="true" type="tns:RatingCurve" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfRatingCurve" nillable="true" type="tns:ArrayOfRatingCurve" />
-  <xs:complexType name="RatingCurve">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Approval" type="xs:int" />
-      <xs:element minOccurs="0" name="BaseRatingTable" nillable="true" type="tns:RatingPoint" maxOccurs="unbounded" />
-      <xs:element minOccurs="0" name="Equation" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="InputParameter" nillable="true" type="tns:ParameterWithUnit" />
-      <xs:element minOccurs="0" name="Offsets" nillable="true" type="tns:OffsetPoint" maxOccurs="unbounded" />
-      <xs:element minOccurs="0" name="OutputParameter" nillable="true" type="tns:ParameterWithUnit" />
-      <xs:element minOccurs="0" name="PeriodsOfApplicability" nillable="true" type="tns:PeriodOfApplicability" maxOccurs="unbounded" />
-      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Shifts" nillable="true" type="tns:RatingShift" maxOccurs="unbounded" />
-      <xs:element minOccurs="0" name="Type" type="tns:RatingCurveType" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="RatingCurve" nillable="true" type="tns:RatingCurve" />
-  <xs:complexType name="ArrayOfUnitMetadata">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="UnitMetadata" nillable="true" type="tns:UnitMetadata" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfUnitMetadata" nillable="true" type="tns:ArrayOfUnitMetadata" />
-  <xs:complexType name="UnitMetadata">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="BaseMultiplier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="BaseOffset" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="GroupIdentifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Symbol" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="UnitMetadata" nillable="true" type="tns:UnitMetadata" />
+  <xs:element name="ArrayOfKeyValueOfstringSwaggerPropertyEdXdwojR" nillable="true" type="tns:ArrayOfKeyValueOfstringSwaggerPropertyEdXdwojR" />
 </xs:schema>

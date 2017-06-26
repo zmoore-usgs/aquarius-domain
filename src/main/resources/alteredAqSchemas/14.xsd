@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.ActiveMeters" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.ActiveMeters" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.Enum" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="ArrayOfActiveMeterDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActiveMeterDetails" nillable="true" type="tns:ActiveMeterDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActiveMeterDetails" nillable="true" type="tns:ArrayOfActiveMeterDetails" />
+  <xs:complexType name="ActiveMeterDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Configuration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirmwareVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MeterCalibrations" nillable="true" type="tns:ArrayOfActiveMeterCalibration" />
+      <xs:element minOccurs="0" name="MeterType" nillable="true" xmlns:q1="http://schemas.datacontract.org/2004/07/Server.Services.PublishService.ServiceModel.Dtos.FieldVisit.Enum" type="q1:MeterType" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoftwareVersion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActiveMeterDetails" nillable="true" type="tns:ActiveMeterDetails" />
+  <xs:complexType name="ArrayOfActiveMeterCalibration">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActiveMeterCalibration" nillable="true" type="tns:ActiveMeterCalibration" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActiveMeterCalibration" nillable="true" type="tns:ArrayOfActiveMeterCalibration" />
+  <xs:complexType name="ActiveMeterCalibration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Equations" nillable="true" type="tns:ArrayOfActiveMeterCalibrationEquation" />
+      <xs:element minOccurs="0" name="FirstUsedDate" xmlns:q2="http://schemas.datacontract.org/2004/07/System" type="q2:DateTimeOffset" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActiveMeterCalibration" nillable="true" type="tns:ActiveMeterCalibration" />
+  <xs:complexType name="ArrayOfActiveMeterCalibrationEquation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActiveMeterCalibrationEquation" nillable="true" type="tns:ActiveMeterCalibrationEquation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActiveMeterCalibrationEquation" nillable="true" type="tns:ArrayOfActiveMeterCalibrationEquation" />
+  <xs:complexType name="ActiveMeterCalibrationEquation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Intercept" type="xs:double" />
+      <xs:element minOccurs="0" name="InterceptUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RangeEnd" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="RangeStart" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Slope" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActiveMeterCalibrationEquation" nillable="true" type="tns:ActiveMeterCalibrationEquation" />
+</xs:schema>
