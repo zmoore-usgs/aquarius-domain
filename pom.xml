@@ -4,7 +4,7 @@
 	
 	<groupId>gov.usgs.cida</groupId>
 	<artifactId>aquarius-domain</artifactId>
-	<version>17.1.110-2-SNAPSHOT</version>
+	<version>17.1.96-5-SNAPSHOT</version>
 	
 	<packaging>jar</packaging>
 	
@@ -48,14 +48,12 @@
 		<url>https://github.com/USGS-CIDA/aquarius-domain</url>
 		<connection>scm:git:ssh://git@github.com/USGS-CIDA/aquarius-domain.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/USGS-CIDA/aquarius-domain.git</developerConnection>
-		<tag>aquarius-domain-17.1.96-3</tag>
 	</scm>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<aq.host>${aquarius.host}</aq.host>
 	</properties>
 	
 	<distributionManagement>
@@ -133,25 +131,6 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<artifactId>exec-maven-plugin</artifactId>
-				<groupId>org.codehaus.mojo</groupId>
-				<executions>
-					<execution>
-						<id>download-xsd</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>exec</goal>
-						</goals>
-						<configuration>
-							<executable>src/main/resources/buildIt.sh</executable>
-							<arguments>
-								<argument>${aq.host}</argument>
-							</arguments>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
 				<version>1.6</version>
@@ -164,7 +143,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<schemaDirectory>${project.build.directory}/generated-sources/aqSchema</schemaDirectory>
+					<schemaDirectory>src/main/resources/alteredAqSchemas</schemaDirectory>
 					<nv>true</nv>
 					<packageName>gov.usgs.cida.aquarius</packageName>
 					<bindingFiles>bindings.xjb</bindingFiles>

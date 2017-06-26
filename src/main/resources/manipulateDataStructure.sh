@@ -1,5 +1,10 @@
 #!/bin/bash
-XSD_DIRECTORY=target/generated-sources/aqSchema
+RAW_XSD_DIRECTORY=src/main/resources/rawAqSchemas
+XSD_DIRECTORY=src/main/resources/alteredAqSchemas
+
+rm $XSD_DIRECTORY/*
+cp $RAW_XSD_DIRECTORY/* $XSD_DIRECTORY
+
 sedArg=" -i -r "
 if [[ `uname` == "Darwin" ]]; then
 sedArg=" -i.bak -E "
