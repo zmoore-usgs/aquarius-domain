@@ -1,5 +1,5 @@
 #!/bin/bash
-XSD_DIRECTORY=src/main/resources/rawAqSchema
+XSD_DIRECTORY=src/main/resources/rawAqSchemas
 AQ_HOST=$1
 
 echo "Downloading XSDs from $AQ_HOST"
