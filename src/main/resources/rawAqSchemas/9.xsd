@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Server.BusinessInterfaces.DbProfiler" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Server.BusinessInterfaces.DbProfiler" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfPerformanceStats">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PerformanceStats" nillable="true" type="tns:PerformanceStats" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPerformanceStats" nillable="true" type="tns:ArrayOfPerformanceStats" />
+  <xs:complexType name="PerformanceStats">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Timings" nillable="true" type="tns:ArrayOfTimingCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PerformanceStats" nillable="true" type="tns:PerformanceStats" />
+  <xs:complexType name="ArrayOfTimingCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimingCategory" nillable="true" type="tns:TimingCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimingCategory" nillable="true" type="tns:ArrayOfTimingCategory" />
+  <xs:complexType name="TimingCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Average" type="xs:long" />
+      <xs:element minOccurs="0" name="Buckets" nillable="true" type="tns:ArrayOfTimingBucket" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimingCategory" nillable="true" type="tns:TimingCategory" />
+  <xs:complexType name="ArrayOfTimingBucket">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimingBucket" nillable="true" type="tns:TimingBucket" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimingBucket" nillable="true" type="tns:ArrayOfTimingBucket" />
+  <xs:complexType name="TimingBucket">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Count" type="xs:long" />
+      <xs:element minOccurs="0" name="TotalMilliseconds" type="xs:long" />
+      <xs:element minOccurs="0" name="UpperBoundDuration" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimingBucket" nillable="true" type="tns:TimingBucket" />
+</xs:schema>

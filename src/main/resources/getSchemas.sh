@@ -1,11 +1,10 @@
 #!/bin/bash
-XSD_DIRECTORY=target/generated-sources/aqSchema
+XSD_DIRECTORY=src/main/resources/rawAqSchemas
 AQ_HOST=$1
 
 echo "Downloading XSDs from $AQ_HOST"
 
-pwd
-mkdir -p $XSD_DIRECTORY
+rm $XSD_DIRECTORY/*
 
 COUNTER=0
 while [ `curl -s -o /dev/null -w "%{http_code}" "http://$AQ_HOST/AQUARIUS/Publish/v2/metadata?xsd=$COUNTER"` -eq 200 ]; do
