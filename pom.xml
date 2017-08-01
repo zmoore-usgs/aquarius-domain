@@ -51,7 +51,6 @@
                                 <param>DateTimeOffset=Temporal</param>
                                 <param>Offset=String</param>
                             </typeMappings>
-                            <output>out</output>
                             <generateApiTests>false</generateApiTests>
                             <generateApis>false</generateApis>
                             <generateModelTests>false</generateModelTests>
@@ -79,21 +78,36 @@
     </build>
     
     <dependencies>
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-codegen</artifactId>
-            <version>${swagger-codegen-version}</version>
-        </dependency>
+		<!-- logging dependencies -->
+		<dependency>
+			<artifactId>slf4j-api</artifactId>
+			<groupId>org.slf4j</groupId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<artifactId>logback-classic</artifactId>
+			<groupId>ch.qos.logback</groupId>
+			<version>${logback-classic.version}</version>
+		</dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson-version}</version>
         </dependency>
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-jaxrs</artifactId>
+			<scope>compile</scope>
+			<version>${swagger-core-version}</version>
+		</dependency>
     </dependencies>
     <properties>
         <aq.host>http://tsqa.nwis.usgs.gov/AQUARIUS/Publish/v2/resources</aq.host>
         <swagger-codegen-version>2.3.0.1-SNAPSHOT</swagger-codegen-version>
         <java.version>1.8</java.version>
+		<slf4j.version>1.7.7</slf4j.version>
+		<logback-classic.version>1.1.2</logback-classic.version>
+		<swagger-core-version>1.5.15</swagger-core-version>		
         <gson-version>2.8.1</gson-version>
         <maven-plugin-version>1.0.0</maven-plugin-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
