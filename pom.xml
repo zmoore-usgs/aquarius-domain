@@ -22,10 +22,10 @@
                         </goals>
                         <configuration>
                             <inputSpec>${aq.host}</inputSpec>
-                            <language>jaxrs-spec</language>
-                            <useJaxbAnnotations>true</useJaxbAnnotations>
-                            <useXml>true</useXml>
+                            <language>jaxrs-cxf-client</language>
                             <configOptions>
+                                <useJaxbAnnotations>true</useJaxbAnnotations>
+                                <useXml>true</useXml>
                                 <sourceFolder>src/main/java</sourceFolder>
                                 <dateLibrary>java8</dateLibrary>
                             </configOptions>
@@ -39,6 +39,8 @@
                                 <param>Temporal=java.time.temporal.Temporal</param>
                                 <param>DateTime=java.time.temporal.Temporal</param>
                                 <param>DateTimeOffset=java.time.temporal.Temporal</param>
+                                <param>StatisticalDateTimeOffset=java.time.temporal.Temporal</param>
+                                <param>Duration=java.time.Duration</param>
                                 <param>Instant=java.time.Instant</param>
                             </importMappings>
                             <typeMappings>
@@ -47,7 +49,9 @@
                                 <param>Double=java.math.BigDecimal</param>
                                 <param>DateTime=Temporal</param>
                                 <param>DateTimeOffset=Temporal</param>
+                                <param>StatisticalDateTimeOffset=Temporal</param>
                                 <param>Offset=String</param>
+                                <param>Duration=Duration</param>
                             </typeMappings>
                             <generateApiTests>false</generateApiTests>
                             <generateApis>false</generateApis>
