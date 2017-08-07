@@ -47,5 +47,5 @@ do
     done
 
     #download json
-    curl -s $JSON | sed 's='$SWAGGERBASEURL'='$SWAGGEROUTDIR'=g' > ".""${PATHLIST[i]}"
+    curl -s $JSON | sed 's='$SWAGGERBASEURL'='$SWAGGEROUTDIR'=g' | sed 's=Array=array=g' > ".""${PATHLIST[i]}"
 done
