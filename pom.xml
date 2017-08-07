@@ -21,7 +21,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${aq.host}</inputSpec>
+                            <inputSpec>./src/main/resources/swagger/swagger.json</inputSpec>
                             <language>jaxrs-cxf-client</language>
                             <configOptions>
                                 <useJaxbAnnotations>true</useJaxbAnnotations>
@@ -116,7 +116,6 @@
 		</dependency>
     </dependencies>
     <properties>
-        <aq.host>http://tsqa.nwis.usgs.gov/AQUARIUS/Publish/v2/resources</aq.host>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
