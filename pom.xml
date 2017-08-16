@@ -21,13 +21,17 @@
 			<url>https://internal.cida.usgs.gov/maven/content/repositories/cida-public-snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
-	
 	<repositories>
 		<repository>
 			<id>cida-releases</id>
 			<name>CIDA Releases</name>
 			<url>https://internal.cida.usgs.gov/maven/content/repositories/cida-releases</url>
 		</repository>
+        <repository>
+            <id>cida-internal-public-snapshots</id>
+			<name>CIDA Snapshots</name>
+			<url>https://internal.cida.usgs.gov/maven/content/repositories/cida-public-snapshots</url>
+        </repository>
 		<repository>
 			<id>cida-snapshots</id>
 			<name>CIDA Snapshots</name>
@@ -49,6 +53,19 @@
 			<url>http://cida.usgs.gov/maven/cida-public-thirdparty/</url>
 		</repository>
 	</repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>cida-internal-public-snapshots</id>
+			<name>CIDA Snapshots</name>
+            <url>https://internal.cida.usgs.gov/maven/content/repositories/cida-public-snapshots</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
     <build>
         <plugins>
@@ -65,7 +82,7 @@
                             <inputSpec>./src/main/resources/swagger/swagger.json</inputSpec>
                             <language>jaxrs-cxf-client</language>
                             <configOptions>
-                                <useJaxbAnnotations>true</useJaxbAnnotations>
+                                <withXml>true</withXml>
                                 <useXml>true</useXml>
                                 <sourceFolder>src/main/java</sourceFolder>
                                 <dateLibrary>java8</dateLibrary>
@@ -130,6 +147,11 @@
             <groupId>io.swagger</groupId>
             <artifactId>swagger-jersey2-jaxrs</artifactId>
             <version>${swagger-core-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-codegen-maven-plugin</artifactId>
+            <version>${swagger-codegen-version}</version>
         </dependency>
 		<dependency>
 			<groupId>org.hamcrest</groupId>
