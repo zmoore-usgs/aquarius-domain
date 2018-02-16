@@ -61,9 +61,9 @@
 	</repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>cida-internal-public-snapshots</id>
-			<name>CIDA Snapshots</name>
-            <url>https://internal.cida.usgs.gov/maven/content/repositories/cida-public-snapshots</url>
+			<id>cida-public</id>
+			<name>CIDA Public Nexus</name>
+			<url>http://cida.usgs.gov/maven/cida-public-releases/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -175,7 +175,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<swagger-codegen-version>2.3.0-4-SNAPSHOT</swagger-codegen-version>
+		<swagger-codegen-version>2.3.0-4</swagger-codegen-version>
 		<swagger-core-version>1.5.15</swagger-core-version>		
         <gson-version>2.2.4</gson-version>
     </properties>
