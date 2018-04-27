@@ -1,6 +1,6 @@
 #!/bin/bash
 #CONFIGURATION
-SWAGGERBASEURL="${1:-"http://ts.nwis.usgs.gov/AQUARIUS/Publish/v2/"}"
+SWAGGERBASEURL="${1:-"http://tsqa.nwis.usgs.gov/AQUARIUS/Publish/v2/"}"
 SWAGGERROOTPATH="${2:-"/resources"}"
 
 #Sourced from https://gist.github.com/cjus/1047794
