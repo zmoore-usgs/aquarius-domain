@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 	<groupId>gov.usgs.cida</groupId>
 	<artifactId>aquarius-domain</artifactId>
-    <version>17.2.208-4-SNAPSHOT</version>    
+    <version>18.1.204-SNAPSHOT</version>    
 	<packaging>jar</packaging>
 	<name>Aquarius Domain</name>
 	<description> 

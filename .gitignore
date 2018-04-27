@@ -4,6 +4,6 @@ out/
 .settings/
 .classpath
 nb-configuration.xml
-
+/.vscode
 
 *.orig
